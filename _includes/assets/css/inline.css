@@ -5,6 +5,7 @@ header {
 
 main {
   display: flex;
+  flex-direction: column;
 
   padding: 0 20px;
 	margin: 0 auto;
@@ -50,4 +51,17 @@ figcaption {
 
 .card-list {
   flex: 50%;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+@media print {
+  main {
+    flex-direction: row;
+  }
 }
