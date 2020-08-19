@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+title: Printable Weekly Planner
+permalink: /
+---
+
+<header>
+  <h1 class="center">{{ weekplan.title }}</h1>
+</header>
+
+<main>
+  <div class="card-list">
+    {% for day in weekplan.week %}
+      <div class="card">
+        <div class="card-header font-weight-bold">
+          <span>{{ day.name }}</span>
+        </div>
+
+        {% for task in day.tasks %}
+          <div>
+            <span>{{ task }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="card-list">
+    <div class="card">
+      <div class="card-header font-weight-bold">
+        <span>{{ weekplan.goallist.title }}</span>
+      </div>
+
+      {% for goal in weekplan.goallist.goals %}
+        <div>
+          <span>{{ goal }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="card">
+      <div class="card-header font-weight-bold">
+        <span>{{ weekplan.weights.title }}</span>
+      </div>
+
+      {% for result in weekplan.weights.results %}
+        <div>
+          <span>{{ result.date }} - {{ result.weight }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="card">
+      {% for img in weekplan.images %}
+        <figure>
+          <img src="{{ img.src | safe }}" alt="{{ img.alt | safe }}" loading="lazy" />
+          <figcaption>{{ img.caption | safe }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+</main>

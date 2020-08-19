@@ -1,0 +1,53 @@
+header {
+  border-bottom: 1px solid darkgrey;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+
+  padding: 0 20px;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  color: darkgrey;
+  font-style: italic;
+}
+
+/* utilities */
+
+.size-50 {
+  max-width: 50%;
+}
+
+.center {
+  text-align: center;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+/* Card */
+
+.card {
+  box-shadow: 0px 0px 20px rgba(57,79,122,0.1);
+  margin: 0 10px 20px 10px;
+  padding: 20px 30px 30px;
+}
+
+.card-header {
+  border-bottom: 1px solid darkgrey;
+	margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.card-list {
+  flex: 50%;
+}
